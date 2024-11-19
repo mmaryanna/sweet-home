@@ -1,0 +1,35 @@
+/* Стиль для тексту з градієнтом */
+.gradient-text {
+    font-family: "Lora", serif; 
+    font-weight: 800; 
+    font-size: 52px; 
+    background: linear-gradient(90deg, #c1c1c1, #333333, #c1c1c1); 
+    background-size: 200% 200%; 
+    -webkit-background-clip: text; /* Застосовує градієнт тільки до тексту */
+    -webkit-text-fill-color: transparent; /* Зробить сам текст прозорим, щоб показувався лише градієнт */
+    animation: gradient-animation 2s infinite linear alternate; /* Додає анімацію, що рухає градієнт по тексту */
+}
+
+/* Анімація для зміщення градієнта по тексту */
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%; /* Початкова позиція градієнта */
+    }
+
+    100% {
+        background-position: 100% 50%; /* Кінцева позиція градієнта */
+    }
+}
+
+/* Анімація для появи елемента (змінюється непрозорість та положення) */
+@keyframes appear {
+    0% {
+        opacity: 0; 
+        transform: translateY(20px); /* Початкове зміщення вниз на 20px */
+    }
+
+    100% {
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}

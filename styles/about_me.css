@@ -1,0 +1,64 @@
+/* Стилі для блоку .about-me */
+.about-me {
+    background-color: #f7ebed;
+}
+
+/* Стилі для заголовку в .about-me-title */
+.about-me-title>h1 {
+    font-size: 42px;
+    margin: 0;
+}
+
+/* Стилі для елементів тексту в .about-me-history та .custom-text */
+.about-me-history,
+.custom-text {
+    font-family: "Lora", serif; 
+    color: rgb(112, 107, 107);
+}
+
+/* Стилі для зображень в .image-item */
+.image-item>img {
+    width: 75%;
+    height: 100%;
+}
+
+/* Анімація для елементів з класами .custom-image та .about-my-kitchen */
+.custom-image,
+.about-my-kitchen {
+    animation: fadeIn 1s ease forwards; /* ease означає, що анімація буде починатися повільно, потім прискорюватися, fadeIn – це ім'я анімації */
+}
+
+/* Ключові кадри для анімації fadeIn */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Початкове розташування елемента на 20 пікселів нижче свого звичайного положення */
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Стилі для блоку з текстом #full-text, обмеження висоти */
+#full-text {
+    max-height: 100px;
+    overflow: hidden; /* приховує частини вмісту елемента, які виходять за межі його розміру */
+    transition: max-height 0.3s ease; /* дозволяє створювати плавні анімації */
+}
+
+/* Стилі для розширеного блоку тексту */
+#full-text.expanded {
+    max-height: 500px;
+}
+
+/* Стилі для кнопки #read-more-btn */
+#read-more-btn {
+    margin-top: 10px;
+    background-color: #e8cfd3;
+    color: rgb(112, 107, 107);
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}

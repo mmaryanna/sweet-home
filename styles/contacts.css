@@ -1,0 +1,23 @@
+/* Контейнер для контактної інформації */
+.contacts-container {
+    background-color: #f7ebed; 
+    font-family: "Lora", serif; 
+}
+
+/* Стиль для соціальних іконок */
+.social-icon i {
+    font-size: 2rem; 
+    color: #000;
+}
+
+/* Стиль для іконок при наведенні */
+.social-icon i:hover {
+    color: #ff7f7f; 
+}
+
+/* Адаптивний розмір іконок для екранів з шириною менше 768px */
+@media (max-width: 768px) {
+    .social-icon i {
+        font-size: 1.5rem; /* Зменшення розміру іконок на мобільних пристроях */
+    }
+}

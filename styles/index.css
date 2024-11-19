@@ -1,0 +1,124 @@
+/* Секція з фоновим зображенням і відступом зверху */
+.section {
+    padding-top: 115px; 
+    background-image: url('../assets/images/common/flowers.png'); 
+    background-size: contain; /* Зображення масштабується, щоб увійти в контейнер */
+    background-repeat: repeat-x; /* Зображення повторюється по горизонталі */
+}
+
+/* Стиль для блоку "про бізнес" */
+.about-business {
+    background-color: #f7ebed; 
+    font-family: "Lora", serif;
+}
+
+/* Загальні стилі для зображень */
+img {
+    max-width: 100%;
+    height: auto; /* Пропорційна висота зображення */
+}
+
+/* Контейнер для відгуків */
+.review-container {
+    margin-top: 30px; 
+}
+
+/* Стиль для зображень з фіксованим аспектним співвідношенням */
+.img-fluid {
+    width: 100%; 
+    height: auto; /* Пропорційна висота */
+    aspect-ratio: 1 / 1.3; /* Співвідношення сторін (ширина/висота) */
+    object-fit: cover; /* Збереження пропорцій з обрізанням */
+}
+
+/* Стиль для елементів бізнесу */
+.about-business-item {
+    font-family: "EB Garamond", serif; 
+    color: rgb(112, 107, 107); 
+}
+
+/* Стиль для тексту в блоці "про бізнес" */
+.about-business-text {
+    text-align: center; 
+    justify-content: center;
+    font-size: 32px; 
+}
+
+/* Заголовок для блоку "про бізнес" */
+.about-business-title {
+    font-family: 'Times New Roman', serif; 
+    padding: 20px 0 10px 0; 
+    animation: appear 2s ease-in-out; /* Aнімація починається повільно, прискорюється в середині і знову сповільнюється наприкінці */
+    transition: color 0.3s ease-in-out; /* Плавний перехід кольору */
+}
+
+/* Контейнер для відгуків */
+.review-container {
+    text-align: center; 
+    font-family: "Montserrat", serif; 
+    display: flex; 
+    flex-direction: column; /* Елементи вертикально */
+    align-items: center; /* Вирівнювання по горизонталі */
+    justify-content: center; /* Вирівнювання по вертикалі */
+}
+
+/* Заголовок відгуків */
+.review-title>h1 {
+    font-size: 32px; 
+}
+
+/* Зображення в блоці відгуків */
+.review-image>img {
+    width: 80%; 
+}
+
+/* Контейнер для кнопки */
+.button-container {
+    position: relative; /* Відносне позиціонування */
+    display: inline-block; /* Відображення в ряд */
+    width: max-content; /* Ширина за вмістом */
+}
+
+/* Кнопка внизу */
+.btn-bottom {
+    position: absolute; 
+    bottom: 10px; 
+    left: 50%; 
+    transform: translateX(-50%); /* переміщує елемент по горизонтальній осі (X) на 50% від його власної ширини вліво */
+}
+
+/* Стиль кнопки */
+.btn-bottom {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    padding: 10px 20px; 
+    font-size: 24px; 
+    font-family: "Didot", serif;
+    text-align: center; 
+    background-color: rgba(231, 76, 60, 1); 
+    border: 2px solid rgba(192, 57, 43, 1); 
+    border-radius: 5px; 
+    transition: all 0.12s ease; /* Плавний перехід для всіх властивостей */
+    color: white;
+    cursor: pointer;
+    box-shadow: 1px 1px rgba(0, 0, 0, 0.1), 
+        3px 3px rgba(0, 0, 0, 0.2),
+        5px 5px rgba(0, 0, 0, 0.3),
+        7px 7px rgba(0, 0, 0, 0.4),
+        9px 9px rgba(0, 0, 0, 0.5);
+}
+
+/* Стиль кнопки при наведенні */
+.btn-bottom:hover {
+    background-color: rgba(192, 57, 43, 1); 
+    color: #f1c40f; 
+    box-shadow: 0px 0px rgba(0, 0, 0, 0.1); /* Зміна тіні */
+}
+
+/* Стиль кнопки при фокусі */
+.btn-bottom:focus {
+    outline: none; /* Прибирає обводку */
+    box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.6);
+}
+

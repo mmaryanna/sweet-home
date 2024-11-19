@@ -1,0 +1,16 @@
+/*Стилі для футеру*/
+.footer {
+    background-color: #f8f9fa;
+}
+
+.footer-container {
+    font-family: "Montserrat", serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    height: 100px;
+    background: linear-gradient(to right, #e8cfd3, #846067);
+}

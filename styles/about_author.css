@@ -1,0 +1,46 @@
+/* Стилі для елементів фото всередині контейнера .photo-container */
+.photo-container>.photo-item {
+    width: 75%;
+    height: 100%;
+}
+
+/* Стилі для тексту з класом .custom-text */
+.custom-text {
+    font-family: "Lora", serif;
+    color: rgb(112, 107, 107);
+    font-size: 20px;
+}
+
+/* Стилі для зображень в елементах з класом .item */
+.item img {
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+    object-fit: cover; /* дозволяє зберегти пропорції елемента */
+}
+
+/* Стилі для контейнера відео .video-container */
+.video-container {
+    display: flex;
+    flex-direction: column; /* елементи в контейнері будуть розміщені один під одним (вертикально). */
+    align-items: center;
+    margin: 10px;
+}
+
+/* Стилі для відео всередині контейнера .video */
+.video video {
+    max-width: 100%; /* Зменшує розмір відео до ширини контейнера */
+    height: auto; /* Зберігає пропорції відео */
+}
+
+/* Стилі для окремих фото .photo */
+.photo {
+    margin: 5px 0;
+}
+
+/* Стилі для зображень всередині елемента .photo */
+.photo img {
+    max-width: 100px;
+    height: auto;
+}
+

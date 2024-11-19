@@ -1,0 +1,24 @@
+.menu {  /* Стиль для елементів меню */
+    background-color: #f7ebed;  
+}
+
+.card {  /* Стиль для картки */
+    border: 1px solid #ddd;  
+    border-radius: 8px;  
+    overflow: hidden;  /* Переховує все, що виходить за межі картки */
+    transition: transform 0.3s;  /* Плавна анімація зміни трансформації картки за 0.3 секунди */
+    cursor: pointer;  
+}
+
+.card:hover {  /* Стиль для картки під час наведенні */
+    transform: scale(1.05);  /* Збільшує картку на 5% при наведенні */
+}
+
+.card img {  /* Стиль для зображення в картці */
+    max-height: 350px;  
+    object-fit: cover;  
+}
+
+p {  /* Стиль для всіх елементів <p> */
+    font-family: "Lora", serif;  
+}

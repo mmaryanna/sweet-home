@@ -1,0 +1,60 @@
+/* Роздільник між елементами навігації */
+.nav-separator {
+    margin: 0 10px;
+}
+
+/* Стиль для елементів з рамкою */
+.border {
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+
+/* Стиль для логотипу */
+.logo {
+    background-color: #e8cfd3;
+    font-family: "Lora", serif;
+    font-size: 38px;
+    text-decoration: none;
+    color: #ffffff;
+    transition: background-color 0.6s ease, color 0.6s ease;
+    /* Плавний перехід для кольору та фону */
+}
+
+/* Стиль при наведенні на логотип */
+.logo:hover {
+    background-color: #ffffff;
+    color: #e8cfd3;
+    transition: background-color 0.6s ease, color 0.6s ease;
+    /* Плавний перехід для кольору та фону */
+}
+
+/* Роздільник у навігаційному меню */
+.nav-title {
+    border-right: 1px solid #000000;
+}
+
+/* Стиль для елементів навігації */
+.item {
+    font-family: "Montserrat", serif;
+}
+
+/* Стиль при наведенні на елементи навігації */
+.item:hover {
+    color: #e8cfd3 !important;
+    transition: color 0.3s;
+}
+
+/* Стиль для блоку "про автора" */
+.about-author {
+    border: 1px solid #e8cfd3;
+    padding: 10px;
+    color: #e8cfd3;
+}
+
+/* Стиль при наведенні на блок "про автора" */
+.about-author:hover {
+    transition: background-color 0.6s;
+    background-color: #e8cfd3;
+    color: #ffffff;
+}

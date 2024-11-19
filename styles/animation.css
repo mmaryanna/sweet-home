@@ -1,0 +1,293 @@
+/*Стилі для CSS - анімації*/
+cake__level--top::before,
+.cake__level--middle::before,
+.cake__level--bottom::before {
+    height: 10px;
+    width: 100%;
+    background-color: #f16c7a;
+    display: block;
+    position: relative;
+    top: 13px;
+    border-left: 0 solid #483e36;
+    border-top: 3px solid #483e36;
+    border-right: 0 solid #483e36;
+    border-bottom: 3px solid #483e36;
+}
+
+.cake__level--top,
+.cake__level--middle,
+.cake__level--bottom,
+.cake__base::after,
+.cake__base::before,
+.cake__base,
+.cake__level--top::before,
+.cake__level--middle::before,
+.cake__level--bottom::before {
+    box-shadow: inset -20px 5px 10px -10px rgba(0, 0, 0, 0.38);
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cake__container {
+    height: 400px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    -webkit-animation: bounce 1s ease infinite;
+    animation: bounce 1s ease infinite;
+    transform-origin: bottom center;
+}
+
+@-webkit-keyframes bounce {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    50% {
+        transform: scale(1.05, 0.95);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    50% {
+        transform: scale(1.05, 0.95);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+.shadow {
+    width: 165px;
+    height: 5px;
+    background-color: black;
+    position: absolute;
+    top: 57px;
+    left: 10px;
+    border-radius: 50%;
+    filter: blur(2px);
+}
+
+.cake__base {
+    width: 165px;
+    height: 30px;
+    border: 3px solid #483e36;
+    border-radius: 0 0 35px 35px;
+    position: relative;
+    background-color: #fce8cb;
+}
+
+.cake__base::before {
+    content: "";
+    display: block;
+    background-color: #fce8cb;
+    position: relative;
+    top: 30px;
+    left: 65px;
+    z-index: -1;
+    width: 35px;
+    height: 15px;
+    border-left: 3px solid #483e36;
+    border-top: 0 solid #483e36;
+    border-right: 3px solid #483e36;
+    border-bottom: 0 solid #483e36;
+}
+
+.cake__base::after {
+    content: "";
+    display: block;
+    background-color: #fce8cb;
+    position: relative;
+    width: 90px;
+    height: 10px;
+    top: 30px;
+    left: 37.5px;
+    border-radius: 35px 35px 0 0;
+    border: 3px solid #483e36;
+}
+
+.cake__level--bottom {
+    width: 145px;
+    height: 40px;
+    background-color: #87796f;
+    border-left: 3px solid #483e36;
+    border-top: 3px solid #483e36;
+    border-right: 3px solid #483e36;
+    border-bottom: 0 solid #483e36;
+    border-radius: 17.5px 17.5px 0 0;
+}
+
+.cake__level--bottom::before {
+    content: "";
+}
+
+.cake__level--middle {
+    width: 105px;
+    height: 40px;
+    background-color: #87796f;
+    border-left: 3px solid #483e36;
+    border-top: 3px solid #483e36;
+    border-right: 3px solid #483e36;
+    border-bottom: 0 solid #483e36;
+    border-radius: 17.5px 17.5px 0 0;
+}
+
+.cake__level--middle::before {
+    content: "";
+}
+
+.cake__level--top {
+    width: 65px;
+    height: 40px;
+    background-color: #87796f;
+    border-left: 3px solid #483e36;
+    border-top: 3px solid #483e36;
+    border-right: 3px solid #483e36;
+    border-bottom: 0 solid #483e36;
+    border-radius: 17.5px 17.5px 0 0;
+}
+
+.cake__level--top::before {
+    content: "";
+}
+
+.candles {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 30px;
+}
+
+.candle {
+    height: 30px;
+    width: 6px;
+    border-left: 3px solid #483e36;
+    border-top: 3px solid #483e36;
+    border-right: 3px solid #483e36;
+    border-bottom: 0 solid #483e36;
+    background-color: #fce8cb;
+    position: relative;
+}
+
+.candle::before {
+    content: "";
+    display: block;
+    height: 5px;
+    width: 3px;
+    background-color: #87796f;
+    position: relative;
+    left: 1.5px;
+    top: -6px;
+}
+
+.candle--fire {
+    display: block;
+    border: 3px solid #483e36;
+    height: 14px;
+    width: 6px;
+    position: relative;
+    top: -25px;
+    left: -3px;
+    z-index: -1;
+    background-color: #dfe959;
+    opacity: 0.9;
+    border-radius: 50% 50% 50% 50%/60% 60% 40% 40%;
+    -webkit-animation: fireanimation 0.6s infinite;
+    animation: fireanimation 0.6s infinite;
+    transform-origin: bottom center;
+}
+
+
+.stretch--animation {
+    -webkit-animation: stretch 1s infinite ease;
+    animation: stretch 1s infinite ease;
+    transform-origin: center center;
+}
+
+@-webkit-keyframes stretch {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    50% {
+        transform: scale(0.8, 1.2) translateY(2px);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes stretch {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    50% {
+        transform: scale(0.8, 1.2) translateY(2px);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+@-webkit-keyframes fireanimation {
+    0% {
+        transform: translateY(1px) rotate(3deg);
+    }
+
+    25% {
+        transform: rotate(-3deg);
+    }
+
+    50% {
+        transform: translateY(1px) rotate(2deg);
+    }
+
+    75% {
+        transform: rotate(-3deg);
+    }
+
+    100% {
+        transform: translateY(1px) rotate(3deg);
+    }
+}
+
+@keyframes fireanimation {
+    0% {
+        transform: translateY(1px) rotate(3deg);
+    }
+
+    25% {
+        transform: rotate(-3deg);
+    }
+
+    50% {
+        transform: translateY(1px) rotate(2deg);
+    }
+
+    75% {
+        transform: rotate(-3deg);
+    }
+
+    100% {
+        transform: translateY(1px) rotate(3deg);
+    }
+}

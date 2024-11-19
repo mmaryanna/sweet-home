@@ -1,0 +1,42 @@
+.widgets {  /* Стиль для контейнера віджетів */
+    display: flex;  
+    flex-wrap: wrap;  /* Дозволяє елементам переноситися на новий рядок при необхідності */
+    width: 100%;  
+    padding: 20px; 
+    gap: 20px;  /* Простір між віджетами */
+}
+
+.clock-widget,  /* Стиль для годинникового віджету */
+.weather-widget {  /* Стиль для погодного віджету */
+    width: 48%;  
+    padding: 15px; 
+    background-color: #f7f7f7; 
+    border-radius: 12px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    display: flex;  
+    flex-direction: column;  /* Віджети будуть розташовуватися стовпчиком */
+    align-items: center;  
+    text-align: center;  
+}
+
+.widget-info {  /* Стиль для текстової інформації всередині віджету */
+    font-size: 1rem;  
+    color: #666;  
+    margin-top: 10px;
+}
+
+.clock-widget iframe,  /* Стиль для iframe в годинниковому віджеті */
+.weather-widget img {  /* Стиль для зображення в погодному віджеті */
+    border-radius: 8px;  
+}
+
+@media (max-width: 768px) {  /* Адаптивні стилі для екранів шириною до 768px */
+    .clock-widget,  /* Годинниковий віджет */
+    .weather-widget {  /* Погодний віджет */
+        width: 100%; 
+    }
+}
+
+
+
+

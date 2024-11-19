@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Про мене</title>
+
+    <link rel="icon" href="assets/images/icon/icon.jpg" type="image/png">
+    <!-- Підключення стилів -->
+    <link rel="stylesheet" href="styles/about_me.css">
+    <link rel="stylesheet" href="styles/common_styles.css">
+
+    <!-- Підключення шрифтів Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;0,400;0,700;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Плейсхолдер для динамічного завантаження шапки -->
+    <div id="header-placeholder"></div>
+
+    <!-- Основний контент сторінки -->
+    <main>
+        <div class="container py-4 about-me">
+            <div class="row align-items-center mb-4">
+                <div class="col-2 d-flex justify-content-end image-item">
+                    <img src="assets/images/common/flower.png" alt="flower" class="img-fluid">
+                </div>
+                <div class="col-8 text-center about-me-title">
+                    <h1 class="gradient-text">Чому варто обрати саме мене?</h1>
+                </div>
+                <div class="col-2 d-flex justify-content-start image-item">
+                    <img src="assets/images/common/flower.png" alt="flower" class="img-fluid">
+                </div>
+            </div>
+
+            <div class="row align-items-center mb-4">
+                <div class="col-2 d-flex justify-content-center image-item">
+                    <img src="assets/images/common/flower.png" alt="flower" class="img-fluid">
+                </div>
+
+                <div class="col text-center">
+                    <p class="about-me-history">
+                        Моя історія почалася з того, що я завжди була готова допомогти рідним чи близьким із тортом до
+                        Дня народження, невеликого весілля чи іншого заходу.
+                        Через деякий час я все ж таки вирішила, що готова вийти на новий рівень почала робити торти на
+                        замовлення для усіх.
+                    </p>
+                </div>
+                <div class="col-2 d-flex justify-content-center image-item">
+                    <img src="assets/images/common/flower.png" alt="flower" class="img-fluid">
+                </div>
+            </div>
+
+            <div class="row align-items-stretch justify-content-center mb-3">
+                <div class="col-md-4 d-flex justify-content-center align-items-center">
+                    <img src="assets/images/common/flour.jpg" alt="flour" class="img-fluid custom-image">
+                </div>
+
+                <div
+                    class="col-md-4 about-me-text d-flex align-items-center justify-content-center about-my-kitchen bg-white">
+                    <div>
+                        <p class="text-center custom-text" id="full-text">
+                            Моя кухня - це моє королівство - <br>
+                            чистота та порядок! <br>
+                            Побутова техніка сучасна - <br>
+                            різного рівня (є професійна, та більш простіша). <br>
+                            Всю роботу виконую сама: <br>
+                            придбання продуктів в магазині <br>
+                            (ніколи не економлю, та обираю лише <br>
+                            перевірені досвідом), <br>
+                            вимішування тіста, <br>
+                            приготування крему, <br>
+                            збірка, упакування. <br>
+                            Не дивлячись на те, що я працюю вдома, <br>
+                            намагаюся дотримуватися <br>
+                            ресторанних стандартів (а що, <br>
+                            як раптом ревізор прийде без попередження з перевіркою).
+                        </p>
+                        <!-- Кнопка для розгортання додаткового тексту -->
+                        <div class="text-center">
+                            <p class="custom-text" id="read-more-btn" onclick="toggleText()">Читати ще</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Плейсхолдер для динамічного завантаження футера -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Підключення Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+        </script>
+
+    <!-- Підключення скриптів для динамічного завантаження компонентів -->
+    <script src="js/loadComponent.js"></script>
+
+    <!-- Скрипт для функціоналу "Читати більше/менше" -->
+    <script>
+        function toggleText() {
+            const textElement = document.getElementById('full-text');
+            const button = document.getElementById('read-more-btn');
+
+            // Перемикання класу 'expanded', щоб показати/сховати текст
+            textElement.classList.toggle('expanded');
+
+            // Зміна тексту кнопки в залежності від стану
+            button.textContent = textElement.classList.contains('expanded') ? 'Читати менше' : 'Читати ще'; 
+            //Коли користувач натискає на кнопку, викликається функція toggleText().
+            //Функція додає або видаляє клас expanded для елемента з текстом.
+            //В залежності від того, чи є клас expanded, текст на кнопці змінюється на "Читати менше" або "Читати ще".
+        } 
+    </script>
+
+</body>
+
+</html>
